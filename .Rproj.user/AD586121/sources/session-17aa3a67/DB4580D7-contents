@@ -1,0 +1,16 @@
+#install.packages("usethis")
+library(tidyverse)
+library(dplyr)
+library(usethis)
+use_git_config(user.name = "Dinara",
+               user.email = "dinara.karimova2013@yandex.ru")
+ # then
+git_sitrep()
+
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+
+
+ds <-  data.frame(name = letters[1:10], number = 1:10)
+write.csv(ds, "data.csv")
+
